@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyber">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yashmit Kumar | Full Stack Developer & Cyber Security Engineer</title>
+  <meta name="description" content="Portfolio of Yashmit Kumar - Full Stack Developer skilled in HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MySQL/MongoDB. BTech CSE (Cyber Security) at RCET Bhilai.">
+  <meta name="keywords" content="Yashmit Kumar, Full Stack Developer, Web Developer, React, Node.js, Cyber Security, Portfolio, Bhilai, Rungta">
+  <meta name="author" content="Yashmit Kumar">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yashmit Kumar | Full Stack Developer Portfolio">
+  <meta property="og:description" content="Explore interactive projects, full-stack web applications, and cyber security skills by Yashmit Kumar.">
+  <meta property="og:url" content="https://github.com/Yashmit-kumar">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23080b14'/><path d='M30 25 L45 50 L30 75 M70 25 L55 50 L70 75' stroke='%2300f5d4' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='50' r='6' fill='%23a855f7'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="loading">
+  <!-- Custom Glow Cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Background Particle & Grid Canvas -->
+  <canvas id="bgCanvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+  <div class="scanline"></div>
+
+  <!-- Top Announcement / Status Bar -->
+  <aside class="status-ribbon" aria-label="Availability Status">
+    <div class="status-ribbon-content">
+      <span class="live-pulse"></span>
+      <span class="status-text">Available for Software Engineering Roles &amp; Full Stack Internships</span>
+      <span class="status-divider">•</span>
+      <span class="status-sub">BTech CSE (Cyber Security) '28 &bull; RCET Bhilai</span>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Yashmit Kumar Homepage">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">Yashmit<span class="brand-dot">_</span>Kumar</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-num">02.</span> Skills</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-num">03.</span> Projects</a></li>
+          <li><a href="#certifications" class="nav-link"><span class="nav-num">04.</span> Certs</a></li>
+          <li><a href="#education" class="nav-link"><span class="nav-num">05.</span> Education</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">06.</span> Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Audio Effects Toggle -->
+        <button id="audioToggle" class="icon-btn" aria-label="Toggle Sound Effects" title="Toggle Futuristic Sound Effects">
+          <svg class="icon sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <svg class="icon sound-off hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button id="themeToggle" class="icon-btn" aria-label="Switch Cyber Theme" title="Switch Theme (Cyber Neon / Obsidian / Electric)">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Hacker Terminal Trigger -->
+        <button id="terminalToggleBtn" class="terminal-trigger-btn" aria-label="Open Interactive Terminal" title="Open Interactive Developer CLI (Press ~)">
+          <span class="term-btn-code">&gt;_ CLI</span>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button id="resumeModalBtn" class="btn btn-outline-cyan btn-sm">
+          <span>Resume CV</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Full Stack Engineer &bull; Cyber Security Enthusiast</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting">Hello, World! I'm</span>
+            <span class="hero-name-gradient">Yashmit Kumar</span>
+          </h1>
+
+          <div class="hero-typing-box">
+            <span class="prompt-arrow">&gt;</span>
+            <span class="static-prefix">Building&nbsp;</span>
+            <span id="typedText" class="typed-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Passionate <strong>Full Stack Developer</strong> with hands-on experience building and deploying
+            end-to-end web applications—from fluid, accessible front-ends to high-throughput backend APIs and secure database integrations.
+            Combining robust software engineering with a <strong>Cyber Security mindset</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Projects</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+            </a>
+            <button class="btn btn-ghost copy-email-btn" data-email="yashmitbhatt07@gmail.com" title="Copy Email Address">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Social Links -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <a href="https://github.com/Yashmit-kumar" target="_blank" rel="noopener noreferrer" class="social-chip" title="GitHub Profile">
+              <svg class="chip-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/yashmit-bhatt-799a11360" target="_blank" rel="noopener noreferrer" class="social-chip" title="LinkedIn Profile">
+              <svg class="chip-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="tel:+919142939660" class="social-chip" title="Call Yashmit">
+              <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>+91-9142939660</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Cyber Card -->
+        <div class="hero-visual" id="heroVisualCard">
+          <div class="cyber-card-3d">
+            <div class="card-header-bar">
+              <div class="window-controls">
+                <span class="win-btn win-close"></span>
+                <span class="win-btn win-minimize"></span>
+                <span class="win-btn win-expand"></span>
+              </div>
+              <div class="card-title-tab">yashmit_kumar.config.ts</div>
+              <div class="card-status-badge">ONLINE</div>
+            </div>
+
+            <div class="card-code-body">
+              <pre><code><span class="code-comment">// Developer Manifest</span>
+<span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Yashmit Kumar"</span>,
+  <span class="code-property">title</span>: <span class="code-string">"Full Stack Developer"</span>,
+  <span class="code-property">degree</span>: <span class="code-string">"BTech CSE (Cyber Security)"</span>,
+  <span class="code-property">institution</span>: <span class="code-string">"RCET Bhilai"</span>,
+  <span class="code-property">graduation</span>: <span class="code-number">2028</span>,
+  <span class="code-property">stack</span>: {
+    <span class="code-property">languages</span>: [<span class="code-string">"JavaScript"</span>, <span class="code-string">"C"</span>, <span class="code-string">"Java"</span>, <span class="code-string">"Python"</span>],
+    <span class="code-property">frontend</span>: [<span class="code-string">"React.js"</span>, <span class="code-string">"HTML5"</span>, <span class="code-string">"CSS3"</span>],
+    <span class="code-property">backend</span>: [<span class="code-string">"Node.js"</span>, <span class="code-string">"Express.js"</span>, <span class="code-string">"REST APIs"</span>],
+    <span class="code-property">database</span>: [<span class="code-string">"MySQL"</span>, <span class="code-string">"MongoDB"</span>, <span class="code-string">"Sequelize"</span>, <span class="code-string">"Mongoose"</span>]
+  },
+  <span class="code-property">status</span>: <span class="code-string">"Ready to engineer & deploy 🚀"</span>
+};
+
+<span class="code-comment">// Execute build</span>
+<span class="code-variable">developer</span>.<span class="code-function">solveProblems</span>({ <span class="code-property">passion</span>: <span class="code-number">100</span>, <span class="code-property">cleanCode</span>: <span class="code-keyword">true</span> });</code></pre>
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-node" data-speed="1.2">Node.js</div>
+            <div class="floating-badge badge-react" data-speed="0.8">React.js</div>
+            <div class="floating-badge badge-sql" data-speed="1.5">MySQL</div>
+            <div class="floating-badge badge-cyber" data-speed="1.0">CyberSec</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Statistics Bar -->
+      <div class="hero-stats-wrapper">
+        <div class="hero-stats-grid">
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Core Projects Built</span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Tech Skills & Tools</span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number" data-count="4">0</span>
+              <span class="stat-label">Industry Certifications</span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number" data-count="2028">0</span>
+              <span class="stat-label">BTech CSE Graduation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle">// 01. WHO I AM</span>
+          <h2 class="section-title">Engineering Solutions from Frontend to Backend</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          
+          <div class="about-text-column">
+            <h3 class="about-headline">
+              Full Stack Developer blending modern web ecosystems with cyber security rigor.
+            </h3>
+            
+            <p class="about-p">
+              I am a results-oriented <strong>Full Stack Developer</strong> currently pursuing my 
+              <strong>BTech in Computer Science &amp; Engineering (Cyber Security)</strong> at 
+              <em>Rungta College of Engineering and Technology (RCET), Bhilai</em> (Class of 2028).
+            </p>
+
+            <p class="about-p">
+              My engineering journey is defined by hands-on creation: architecting responsive, pixel-perfect 
+              interfaces using <strong>HTML5, CSS3, JavaScript, and React.js</strong>, while engineering robust, scalable 
+              server-side applications and REST APIs using <strong>Node.js and Express.js</strong>. I bridge these layers 
+              with relational and document databases—<strong>MySQL, MongoDB, Sequelize ORM, and Mongoose ODM</strong>.
+            </p>
+
+            <p class="about-p">
+              With a deep foundation in <strong>Cyber Security</strong>, I build applications with data integrity, 
+              secure authentication, input sanitization, and defensive programming in mind from day zero.
+            </p>
+
+            <!-- Soft Skills Highlights -->
+            <div class="soft-skills-container">
+              <h4 class="soft-skills-title">Core Strengths &amp; Mindset:</h4>
+              <div class="soft-skills-badges">
+                <div class="soft-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span>Teamwork &amp; Collaboration</span>
+                </div>
+                <div class="soft-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <span>Analytical Problem Solving</span>
+                </div>
+                <div class="soft-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <span>Leadership &amp; Initiative</span>
+                </div>
+                <div class="soft-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Technical Communication</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-action-row">
+              <a href="#contact" class="btn btn-outline-cyan">
+                <span>Start a Conversation</span>
+              </a>
+              <a href="#projects" class="btn btn-ghost">
+                <span>View My Work &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillars / Architectural Cards -->
+          <div class="about-cards-column">
+            
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon pillar-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4>Frontend Architecture</h4>
+                <p>Creating interactive, accessible interfaces using React.js, modern CSS layout engines, animations, and clean semantic markup.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon pillar-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4>Backend &amp; RESTful APIs</h4>
+                <p>Engineering performant server logic, controllers, modular routing, and secure API endpoints with Node.js and Express.js.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon pillar-emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4>Database Modeling &amp; ORM</h4>
+                <p>Designing structured schemas, normalized relational models in MySQL, and flexible document stores in MongoDB via Sequelize &amp; Mongoose.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon pillar-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4>Cyber Security Mindset</h4>
+                <p>Applying defensive programming practices, password entropy checks, secure payload handling, and vulnerability mitigation.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section section-darker">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-subtitle">// 02. TECHNICAL ARSENAL</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-desc">Technologies, frameworks, and developer tools I leverage to construct robust digital products.</p>
+          <div class="section-line center"></div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Skills</button>
+          <button class="filter-tab" data-filter="programming">Languages</button>
+          <button class="filter-tab" data-filter="frontend">Frontend</button>
+          <button class="filter-tab" data-filter="backend">Backend &amp; API</button>
+          <button class="filter-tab" data-filter="database">Databases &amp; ORM</button>
+          <button class="filter-tab" data-filter="tools">Tools &amp; Cloud</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+
+          <!-- Languages -->
+          <div class="skill-card" data-category="programming" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box">
+                <span class="skill-svg-text">C</span>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">C Language</h4>
+                <span class="skill-tag">Systems &amp; Logic</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="85%"></div>
+              </div>
+              <div class="skill-level-text"><span>Logic &amp; Memory</span><span>85%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="programming" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box">
+                <span class="skill-svg-text">JV</span>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">Java</h4>
+                <span class="skill-tag">OOP &amp; Data Structures</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="80%"></div>
+              </div>
+              <div class="skill-level-text"><span>Object Oriented</span><span>80%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="programming" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box">
+                <span class="skill-svg-text">PY</span>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">Python</h4>
+                <span class="skill-tag">Scripting &amp; AI</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="82%"></div>
+              </div>
+              <div class="skill-level-text"><span>Scripting &amp; Automation</span><span>82%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="programming frontend backend" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-js">
+                <span class="skill-svg-text">JS</span>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">JavaScript (ES6+)</h4>
+                <span class="skill-tag">Full Stack Engine</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="92%"></div>
+              </div>
+              <div class="skill-level-text"><span>Advanced Asynchronous</span><span>92%</span></div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skill-card" data-category="frontend" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-react">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(0 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)"></ellipse>
+                  <circle cx="12" cy="12" r="2" fill="currentColor"></circle>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">React.js</h4>
+                <span class="skill-tag">Component UI</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="88%"></div>
+              </div>
+              <div class="skill-level-text"><span>Hooks &amp; State</span><span>88%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 3l2 16 6 2 6-2 2-16z"></path>
+                  <path d="M7 7h10l-.5 4h-9l.5 4 4 1 4-1 .3-2"></path>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">HTML5</h4>
+                <span class="skill-tag">Semantic Structure</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="95%"></div>
+              </div>
+              <div class="skill-level-text"><span>Semantic &amp; SEO</span><span>95%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-css">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 3l2 16 6 2 6-2 2-16z"></path>
+                  <path d="M16 7H8l.5 4h7l-.5 4-3 1-3-1-.2-2"></path>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">CSS3 / Flex &amp; Grid</h4>
+                <span class="skill-tag">Responsive Styling</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="92%"></div>
+              </div>
+              <div class="skill-level-text"><span>Modern Layouts</span><span>92%</span></div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-card" data-category="backend" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-node">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l9 5v10l-9 5-9-5V7z"></path>
+                  <path d="M12 22V12"></path>
+                  <path d="M12 12l9-5"></path>
+                  <path d="M12 12L3 7"></path>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">Node.js</h4>
+                <span class="skill-tag">Server Runtime</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="88%"></div>
+              </div>
+              <div class="skill-level-text"><span>Event-Driven I/O</span><span>88%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-express">
+                <span class="skill-svg-text">ex</span>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">Express.js</h4>
+                <span class="skill-tag">Web Framework</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="87%"></div>
+              </div>
+              <div class="skill-level-text"><span>Middleware &amp; Routes</span><span>87%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-api">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">RESTful APIs</h4>
+                <span class="skill-tag">Web Services</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="90%"></div>
+              </div>
+              <div class="skill-level-text"><span>Architecture &amp; Endpoints</span><span>90%</span></div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card" data-category="database" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-mysql">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">MySQL</h4>
+                <span class="skill-tag">Relational Database</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="86%"></div>
+              </div>
+              <div class="skill-level-text"><span>Queries &amp; Normalization</span><span>86%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="database" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-mongo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2C8 7 6 12 12 22c6-10 4-15 0-20z"></path>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">MongoDB</h4>
+                <span class="skill-tag">NoSQL Document Store</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="84%"></div>
+              </div>
+              <div class="skill-level-text"><span>Document Modeling</span><span>84%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="database backend" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-orm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">Sequelize / Mongoose</h4>
+                <span class="skill-tag">ORM &amp; ODM</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="85%"></div>
+              </div>
+              <div class="skill-level-text"><span>Schema Validation</span><span>85%</span></div>
+            </div>
+          </div>
+
+          <!-- Tools & Cloud -->
+          <div class="skill-card" data-category="tools" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-git">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="6" y1="3" x2="6" y2="15"></line>
+                  <circle cx="18" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M18 9a9 9 0 0 1-9 9"></path>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">Git &amp; GitHub</h4>
+                <span class="skill-tag">Version Control</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="90%"></div>
+              </div>
+              <div class="skill-level-text"><span>Branching &amp; Collaboration</span><span>90%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-cloud">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">Cloud Deployment</h4>
+                <span class="skill-tag">Hosting &amp; DevOps</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="82%"></div>
+              </div>
+              <div class="skill-level-text"><span>Web Hosting &amp; CI</span><span>82%</span></div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools" data-tilt>
+            <div class="skill-head">
+              <div class="skill-icon-box icon-canva">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="12 8 8 12 12 16 16 12 12 8"></polygon>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h4 class="skill-name">Canva / UI Prototyping</h4>
+                <span class="skill-tag">Design &amp; Visuals</span>
+              </div>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="88%"></div>
+              </div>
+              <div class="skill-level-text"><span>Wireframes &amp; Assets</span><span>88%</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (WITH LIVE PLAYABLE DEMOS) -->
+    <section id="projects" class="section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="header-split">
+            <div>
+              <span class="section-subtitle">// 03. FEATURED WORK</span>
+              <h2 class="section-title">Projects &amp; Deployments</h2>
+            </div>
+            <div class="project-hint-badge">
+              <span class="hint-icon">⚡</span>
+              <span>Click <strong>"Live Interactive Demo"</strong> on any project to test it directly!</span>
+            </div>
+          </div>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- PROJECT 1: DICTIONARY WEB APPLICATION -->
+          <article class="project-featured-card" data-tilt>
+            <div class="project-featured-inner">
+              
+              <div class="project-preview-side">
+                <div class="project-mockup-browser">
+                  <div class="mockup-header">
+                    <div class="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-url">https://dictionary.yashmit.dev</div>
+                  </div>
+                  <div class="mockup-screen dict-mockup-theme">
+                    <div class="mini-app-preview">
+                      <div class="mini-search-bar">
+                        <span>🔍 Search words...</span>
+                        <button class="mini-search-btn">Search</button>
+                      </div>
+                      <div class="mini-result-card">
+                        <div class="word-title">developer <span class="phonetic">/dɪˈvɛləpər/</span></div>
+                        <div class="word-def">A person or thing that develops; a creator of digital applications.</div>
+                        <div class="audio-chip">🔊 Listen Pronunciation</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-badges-row">
+                  <span class="pill-badge pill-date">Dec 2025 – Jan 2026</span>
+                  <span class="pill-badge pill-type">Web Application</span>
+                  <span class="pill-badge pill-featured">★ Interactive</span>
+                </div>
+              </div>
+
+              <div class="project-details-side">
+                <span class="project-order">01 // Web Application</span>
+                <h3 class="project-title">Dictionary Web Application</h3>
+                
+                <p class="project-summary">
+                  Developed an interactive Dictionary Web Application using pure <strong>HTML, CSS, and JavaScript</strong>. 
+                  Engineered with real-time word lookup, detailed definitions, phonetics, parts of speech, synonyms, 
+                  and audio pronunciation playback.
+                </p>
+
+                <ul class="project-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Instant definitions, grammatical parts of speech, and usage examples.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Phonetics and interactive native audio pronunciation playback.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Simple, responsive, lightning-fast user experience designed for seamless vocabulary discovery.</span>
+                  </li>
+                </ul>
+
+                <div class="project-tech-tags">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Dictionary API</span>
+                  <span class="tech-tag">SpeechSynthesis</span>
+                </div>
+
+                <div class="project-cta-actions">
+                  <button class="btn btn-primary btn-sm launch-demo-btn" data-demo="dictionary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <span>Live Interactive Demo</span>
+                  </button>
+                  <a href="https://github.com/Yashmit-kumar" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 2: RANDOM PASSWORD GENERATOR -->
+          <article class="project-featured-card" data-tilt>
+            <div class="project-featured-inner">
+              
+              <div class="project-preview-side">
+                <div class="project-mockup-browser">
+                  <div class="mockup-header">
+                    <div class="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-url">https://passguard.yashmit.dev</div>
+                  </div>
+                  <div class="mockup-screen pass-mockup-theme">
+                    <div class="mini-pass-preview">
+                      <div class="pass-display-box">
+                        <span class="pass-val">Y#9k$Qz7!mR2&amp;X8p</span>
+                        <span class="pass-copy-tag">COPY</span>
+                      </div>
+                      <div class="pass-strength-bar">
+                        <div class="strength-fill strength-high"></div>
+                      </div>
+                      <div class="pass-options-mini">
+                        <span>[✓] Upper</span>
+                        <span>[✓] Numbers</span>
+                        <span>[✓] Symbols</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-badges-row">
+                  <span class="pill-badge pill-date">Feb 2026 – Mar 2026</span>
+                  <span class="pill-badge pill-type">Security Tool</span>
+                  <span class="pill-badge pill-featured">★ CyberSec</span>
+                </div>
+              </div>
+
+              <div class="project-details-side">
+                <span class="project-order">02 // Cyber Security &amp; Utility</span>
+                <h3 class="project-title">Random Password Generator</h3>
+                
+                <p class="project-summary">
+                  Engineered a customizable, cryptographic <strong>Random Password Generator</strong> combining security best 
+                  practices with modern UI ergonomics. Allows users to generate cryptographically strong passwords 
+                  tailored to custom complexity policies.
+                </p>
+
+                <ul class="project-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Generates hardened passwords utilizing uppercase, lowercase, numerals, and special characters.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Customizable parameters (length 6 to 32+ characters, character type toggles, entropy scoring).</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Instant one-click clipboard copying with live visual feedback and strength analysis.</span>
+                  </li>
+                </ul>
+
+                <div class="project-tech-tags">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Entropy / Security</span>
+                  <span class="tech-tag">Clipboard API</span>
+                </div>
+
+                <div class="project-cta-actions">
+                  <button class="btn btn-primary btn-sm launch-demo-btn" data-demo="password">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <span>Live Interactive Demo</span>
+                  </button>
+                  <a href="https://github.com/Yashmit-kumar" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 3: NUMBER GUESSING GAME -->
+          <article class="project-featured-card" data-tilt>
+            <div class="project-featured-inner">
+              
+              <div class="project-preview-side">
+                <div class="project-mockup-browser">
+                  <div class="mockup-header">
+                    <div class="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-url">cli://number-guess.c</div>
+                  </div>
+                  <div class="mockup-screen game-mockup-theme">
+                    <div class="mini-game-preview">
+                      <div class="terminal-text">&gt; ./guess_game</div>
+                      <div class="terminal-text">Target generated in [1..100]</div>
+                      <div class="terminal-text text-yellow">Guess #3: 42 -&gt; "Too Low!"</div>
+                      <div class="terminal-text text-green">Guess #4: 67 -&gt; "BULLSEYE! 🎉"</div>
+                      <div class="retro-badge">Score: 4 Attempts</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-badges-row">
+                  <span class="pill-badge pill-date">Apr 2026 – May 2026</span>
+                  <span class="pill-badge pill-type">C Programming</span>
+                  <span class="pill-badge pill-featured">★ Game Engine</span>
+                </div>
+              </div>
+
+              <div class="project-details-side">
+                <span class="project-order">03 // C Systems &amp; Game Logic</span>
+                <h3 class="project-title">Number Guessing Game (C Logic Engine)</h3>
+                
+                <p class="project-summary">
+                  Developed an interactive <strong>Number Guessing Game using C</strong>, featuring algorithmic 
+                  pseudo-random number generation, input validation loops, and dynamic hint evaluation. 
+                  Ported with a live interactive web arcade terminal for immediate play!
+                </p>
+
+                <ul class="project-feature-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Implements robust C control flow, loops, conditional branching, and input sanitation.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Adaptive feedback engine ("Too High!", "Too Low!", "Hot/Cold") to guide player heuristics.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Attempt tracking, high-score memory, and interactive replay loops.</span>
+                  </li>
+                </ul>
+
+                <div class="project-tech-tags">
+                  <span class="tech-tag">C Language</span>
+                  <span class="tech-tag">Algorithm Design</span>
+                  <span class="tech-tag">CLI Architecture</span>
+                  <span class="tech-tag">State Logic</span>
+                </div>
+
+                <div class="project-cta-actions">
+                  <button class="btn btn-primary btn-sm launch-demo-btn" data-demo="game">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <span>Play Live in Arcade</span>
+                  </button>
+                  <a href="https://github.com/Yashmit-kumar" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & HONORS SECTION -->
+    <section id="certifications" class="section section-darker">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-subtitle">// 04. CREDENTIALS &amp; RIGOR</span>
+          <h2 class="section-title">Certifications &amp; Bootcamps</h2>
+          <p class="section-desc">Specialized training programs, industry credentials, and technical bootcamps completed.</p>
+          <div class="section-line center"></div>
+        </div>
+
+        <div class="certifications-grid">
+
+          <!-- Cert 1 -->
+          <div class="cert-card" data-tilt>
+            <div class="cert-glow"></div>
+            <div class="cert-header">
+              <div class="cert-icon cert-ai">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                </svg>
+              </div>
+              <span class="cert-badge">Verified Credential</span>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Generative AI</h3>
+              <p class="cert-issuer">Advanced AI Concepts, Prompt Engineering &amp; Modern Generative Models</p>
+              <div class="cert-tags">
+                <span>LLMs</span>
+                <span>Generative Models</span>
+                <span>AI Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card" data-tilt>
+            <div class="cert-glow"></div>
+            <div class="cert-header">
+              <div class="cert-icon cert-spoon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="cert-badge">Coding Spoon</span>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Full Stack Development</h3>
+              <p class="cert-issuer">Coding Spoon &bull; HTML5, CSS3, Modern JavaScript</p>
+              <div class="cert-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Modern JavaScript</span>
+                <span>Web Architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card" data-tilt>
+            <div class="cert-glow"></div>
+            <div class="cert-header">
+              <div class="cert-icon cert-mern">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="cert-badge">Coding Spoon</span>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">MERN Full Stack Development</h3>
+              <p class="cert-issuer">Coding Spoon &bull; React.js, Node.js, Express.js, MongoDB</p>
+              <div class="cert-tags">
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card" data-tilt>
+            <div class="cert-glow"></div>
+            <div class="cert-header">
+              <div class="cert-icon cert-agy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <span class="cert-badge">Intensive Program</span>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">AntiGravity Bootcamp</h3>
+              <p class="cert-issuer">Full Stack &amp; Advanced Agentic Software Engineering Bootcamp</p>
+              <div class="cert-tags">
+                <span>Advanced Coding</span>
+                <span>System Design</span>
+                <span>Deployment</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-subtitle">// 05. ACADEMIC FOUNDATION</span>
+          <h2 class="section-title">Education &amp; Background</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="education-timeline">
+
+          <div class="timeline-item active-timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-pulse"></span>
+            </div>
+
+            <div class="timeline-content-card" data-tilt>
+              <div class="timeline-header">
+                <div>
+                  <span class="edu-degree">Bachelor of Technology (BTech)</span>
+                  <h3 class="edu-major">Computer Science &amp; Engineering (Cyber Security)</h3>
+                  <h4 class="edu-college">Rungta College of Engineering and Technology – Bhilai</h4>
+                </div>
+                <div class="edu-period-badge">
+                  <span>Graduating: 2028</span>
+                </div>
+              </div>
+
+              <div class="edu-body">
+                <p>
+                  Specializing in <strong>Cyber Security alongside core Computer Science</strong>. 
+                  Rigorous coursework covering Data Structures &amp; Algorithms, Object-Oriented Programming (Java/C), 
+                  Relational Database Management Systems (MySQL), Computer Networks, Cryptography, and Software Engineering.
+                </p>
+
+                <div class="edu-highlights">
+                  <div class="edu-hl-item">
+                    <span class="hl-bullet">▹</span>
+                    <span><strong>Core Focus:</strong> Secure Web Application Architecture, Defensive Coding &amp; Network Security.</span>
+                  </div>
+                  <div class="edu-hl-item">
+                    <span class="hl-bullet">▹</span>
+                    <span><strong>Hands-on Labs:</strong> Built full-stack apps, CLI utilities, and database schemas concurrently with coursework.</span>
+                  </div>
+                  <div class="edu-hl-item">
+                    <span class="hl-bullet">▹</span>
+                    <span><strong>Location:</strong> Bhilai, Chhattisgarh, India.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section section-darker">
+      <div class="section-container">
+        
+        <div class="section-header text-center">
+          <span class="section-subtitle">// 06. INITIATE CONTACT</span>
+          <h2 class="section-title">Let's Build Something Exceptional</h2>
+          <p class="section-desc">Whether you have an internship opportunity, project collaboration, or just want to connect—my inbox is always open.</p>
+          <div class="section-line center"></div>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Cards Info Column -->
+          <div class="contact-info-col">
+            
+            <div class="contact-action-card" data-tilt>
+              <div class="c-icon-circle c-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="c-info-text">
+                <span class="c-label">Direct Email</span>
+                <a href="mailto:yashmitbhatt07@gmail.com" class="c-value">yashmitbhatt07@gmail.com</a>
+              </div>
+              <button class="c-copy-btn copy-email-btn" data-email="yashmitbhatt07@gmail.com" title="Copy Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="contact-action-card" data-tilt>
+              <div class="c-icon-circle c-emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="c-info-text">
+                <span class="c-label">Phone &amp; WhatsApp</span>
+                <a href="tel:+919142939660" class="c-value">+91-9142939660</a>
+              </div>
+              <a href="https://wa.me/919142939660" target="_blank" rel="noopener noreferrer" class="c-copy-btn" title="Chat on WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="contact-action-card" data-tilt>
+              <div class="c-icon-circle c-purple">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </div>
+              <div class="c-info-text">
+                <span class="c-label">LinkedIn Network</span>
+                <a href="https://linkedin.com/in/yashmit-bhatt-799a11360" target="_blank" rel="noopener noreferrer" class="c-value">LinkedIn</a>
+              </div>
+              <a href="https://linkedin.com/in/yashmit-bhatt-799a11360" target="_blank" rel="noopener noreferrer" class="c-copy-btn" title="Open LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+            <div class="contact-action-card" data-tilt>
+              <div class="c-icon-circle c-blue">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="c-info-text">
+                <span class="c-label">GitHub Repos</span>
+                <a href="https://github.com/Yashmit-kumar" target="_blank" rel="noopener noreferrer" class="c-value">GitHub</a>
+              </div>
+              <a href="https://github.com/Yashmit-kumar" target="_blank" rel="noopener noreferrer" class="c-copy-btn" title="Open GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+            <div class="location-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Based in Bhilai, Chhattisgarh, India &bull; Open to Remote &amp; On-Site</span>
+            </div>
+
+          </div>
+
+          <!-- Contact Interactive Form -->
+          <div class="contact-form-col">
+            <form id="contactForm" class="contact-form-card" novalidate>
+              <div class="form-header">
+                <h3>Send a Message</h3>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yashmitbhatt07@gmail.com" target="_blank" rel="noopener noreferrer" class="form-badge" style="text-decoration:none;cursor:pointer;" title="Compose directly in Gmail Web">Direct Gmail ↗</a>
+              </div>
+
+              <div class="form-group">
+                <label for="senderName">Your Name <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="senderName" name="name" placeholder="e.g. Alex Morgan" required>
+                  <span class="input-focus-border"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail">Your Email <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <input type="email" id="senderEmail" name="email" placeholder="e.g. alex@company.com" required>
+                  <span class="input-focus-border"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderSubject">Subject</label>
+                <div class="input-wrap">
+                  <input type="text" id="senderSubject" name="subject" placeholder="e.g. Full Stack Internship Opportunity">
+                  <span class="input-focus-border"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Message <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <textarea id="senderMessage" name="message" rows="4" placeholder="Hello Yashmit, I came across your portfolio and would love to discuss..." required></textarea>
+                  <span class="input-focus-border"></span>
+                </div>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+                <span class="btn-text">Transmit Message</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div id="formFeedback" class="form-feedback hidden"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-bracket">&lt;</span>
+          <span class="brand-name">Yashmit Kumar</span>
+          <span class="brand-bracket">/&gt;</span>
+          <p class="footer-tagline">Building clean, high-performance web applications with full stack engineering &amp; cyber security principles.</p>
+        </div>
+
+        <div class="footer-nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Yashmit Kumar. All rights reserved. Designed &amp; Engineered with Passion.</p>
+        <div class="footer-back-to-top">
+          <button id="backToTopBtn" aria-label="Back to Top of Page" title="Back to Top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- MODALS & INTERACTIVE LIVE DEMO OVERLAYS        -->
+  <!-- ============================================== -->
+
+  <!-- 1. DICTIONARY LIVE DEMO MODAL -->
+  <div id="dictionaryModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-window">
+        <div class="modal-window-header">
+          <div class="window-title-group">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+            <span class="window-title">Dictionary Web App &bull; Live Interactive Simulator</span>
+          </div>
+          <button class="modal-close-btn" data-close="dictionaryModal" aria-label="Close Modal">&times;</button>
+        </div>
+
+        <div class="modal-window-body">
+          <div class="dict-app-container">
+            <div class="dict-intro-box">
+              <h3>Search Any English Word</h3>
+              <p>Type a word to test Yashmit's Dictionary Engine. Includes definition, phonetic audio pronunciation, and example usage.</p>
+            </div>
+
+            <form id="dictForm" class="dict-search-form">
+              <input type="text" id="dictInput" placeholder="Try: 'developer', 'algorithm', 'cyber', 'security'..." value="developer" autocomplete="off" required>
+              <button type="submit" class="btn btn-primary btn-sm">
+                <span>Lookup Word</span>
+              </button>
+            </form>
+
+            <div class="dict-quick-chips">
+              <span>Quick Try:</span>
+              <button type="button" class="quick-word-chip" data-word="technology">technology</button>
+              <button type="button" class="quick-word-chip" data-word="encryption">encryption</button>
+              <button type="button" class="quick-word-chip" data-word="database">database</button>
+              <button type="button" class="quick-word-chip" data-word="javascript">javascript</button>
+            </div>
+
+            <div id="dictLoading" class="dict-status-msg hidden">
+              <div class="spinner"></div>
+              <span>Searching lexical index...</span>
+            </div>
+
+            <div id="dictResult" class="dict-result-display">
+              <!-- Dynamically populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. RANDOM PASSWORD GENERATOR LIVE DEMO MODAL -->
+  <div id="passwordModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-window">
+        <div class="modal-window-header">
+          <div class="window-title-group">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+            <span class="window-title">PassGuard &bull; Cryptographic Password Generator</span>
+          </div>
+          <button class="modal-close-btn" data-close="passwordModal" aria-label="Close Modal">&times;</button>
+        </div>
+
+        <div class="modal-window-body">
+          <div class="pass-app-container">
+            
+            <div class="pass-header-info">
+              <h3>High-Entropy Password Generator</h3>
+              <p>Generate cryptographically randomized passwords with custom complexity rules and entropy auditing.</p>
+            </div>
+
+            <!-- Password Display Box -->
+            <div class="pass-output-card">
+              <div class="pass-text-field" id="generatedPasswordOutput">Generating...</div>
+              <div class="pass-output-btns">
+                <button id="regeneratePassBtn" class="pass-action-icon" title="Regenerate Password">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                  </svg>
+                </button>
+                <button id="copyPassBtn" class="pass-action-icon" title="Copy to Clipboard">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Strength Meter -->
+            <div class="strength-meter-wrap">
+              <div class="meter-labels">
+                <span>Strength Assessment:</span>
+                <span id="strengthText" class="strength-text-val">Very Strong</span>
+              </div>
+              <div class="strength-track">
+                <div id="strengthBarFill" class="strength-bar-progress"></div>
+              </div>
+            </div>
+
+            <!-- Configuration Controls -->
+            <div class="pass-controls-card">
+              
+              <div class="slider-control-group">
+                <div class="slider-label-row">
+                  <label for="passLengthSlider">Character Length:</label>
+                  <span id="passLengthValue" class="slider-numeric">16</span>
+                </div>
+                <input type="range" id="passLengthSlider" min="6" max="36" value="16">
+              </div>
+
+              <div class="checkbox-controls-grid">
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" id="chkUpper" checked>
+                  <span class="chk-box"></span>
+                  <span class="chk-text">Uppercase Letters (A-Z)</span>
+                </label>
+
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" id="chkLower" checked>
+                  <span class="chk-box"></span>
+                  <span class="chk-text">Lowercase Letters (a-z)</span>
+                </label>
+
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" id="chkNumbers" checked>
+                  <span class="chk-box"></span>
+                  <span class="chk-text">Numbers (0-9)</span>
+                </label>
+
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" id="chkSymbols" checked>
+                  <span class="chk-box"></span>
+                  <span class="chk-text">Special Symbols (!@#$%^&amp;*)</span>
+                </label>
+              </div>
+
+              <button id="generateNewPassActionBtn" class="btn btn-primary btn-block">
+                <span>Generate New Password</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. NUMBER GUESSING GAME LIVE DEMO MODAL -->
+  <div id="gameModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-window">
+        <div class="modal-window-header">
+          <div class="window-title-group">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+            <span class="window-title">C Logic Arcade &bull; Number Guessing Engine</span>
+          </div>
+          <button class="modal-close-btn" data-close="gameModal" aria-label="Close Modal">&times;</button>
+        </div>
+
+        <div class="modal-window-body">
+          <div class="game-arcade-container">
+            
+            <div class="game-top-bar">
+              <div class="game-stat-item">
+                <span class="g-stat-label">TARGET RANGE</span>
+                <span class="g-stat-val">1 &mdash; 100</span>
+              </div>
+              <div class="game-stat-item">
+                <span class="g-stat-label">ATTEMPTS</span>
+                <span id="gameAttemptCount" class="g-stat-val">0</span>
+              </div>
+              <div class="game-stat-item">
+                <span class="g-stat-label">BEST RECORD</span>
+                <span id="gameBestScore" class="g-stat-val">-</span>
+              </div>
+            </div>
+
+            <!-- Arcade Screen -->
+            <div class="arcade-screen" id="arcadeScreen">
+              <div class="terminal-line"><span class="t-prompt">&gt;</span> [SYSTEM_INIT]: Loading C algorithmic engine...</div>
+              <div class="terminal-line"><span class="t-prompt">&gt;</span> [RAND_GEN]: Secret number selected between 1 and 100.</div>
+              <div class="terminal-line text-cyan"><span class="t-prompt">&gt;</span> Enter your guess below to test the comparison logic!</div>
+            </div>
+
+            <!-- Game Input Form -->
+            <form id="gameGuessForm" class="game-guess-form">
+              <div class="game-input-row">
+                <span class="arcade-arrow">&gt;&gt;</span>
+                <input type="number" id="gameGuessInput" min="1" max="100" placeholder="Enter number (1-100)..." required autocomplete="off">
+                <button type="submit" id="gameGuessBtn" class="btn btn-primary btn-sm">Submit Guess</button>
+                <button type="button" id="gameResetBtn" class="btn btn-ghost btn-sm">Restart</button>
+              </div>
+            </form>
+
+            <div class="game-hints-footer">
+              <span>💡 Algorithmic Hint: Use Binary Search heuristics to guess in 7 attempts or fewer!</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. RESUME / CV MODAL -->
+  <div id="resumeModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-window">
+        <div class="modal-window-header">
+          <div class="window-title-group">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+            <span class="window-title">Curriculum Vitae &bull; Yashmit Kumar</span>
+          </div>
+          <div class="modal-header-actions">
+            <button id="printResumeBtn" class="btn btn-secondary btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              <span>Print / Save PDF</span>
+            </button>
+            <button class="modal-close-btn" data-close="resumeModal" aria-label="Close Modal">&times;</button>
+          </div>
+        </div>
+
+        <div class="modal-window-body printable-resume-body" id="printableResumeArea">
+          
+          <div class="resume-sheet">
+            <div class="resume-header">
+              <h1 class="resume-name">Yashmit Kumar</h1>
+              <p class="resume-role-tag">Full Stack Developer | BTech CSE (Cyber Security)</p>
+              
+              <div class="resume-contacts-row">
+                <a href="tel:+919142939660" class="resume-contact-link">
+                  <svg class="resume-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>+91-9142939660</span>
+                </a>
+                <span class="resume-sep">•</span>
+                <a href="mailto:yashmitbhatt07@gmail.com" class="resume-contact-link">
+                  <svg class="resume-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>yashmitbhatt07@gmail.com</span>
+                </a>
+                <span class="resume-sep">•</span>
+                <a href="https://linkedin.com/in/yashmit-bhatt-799a11360" target="_blank" rel="noopener noreferrer" class="resume-contact-link">
+                  <svg class="resume-contact-icon icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+                <span class="resume-sep">•</span>
+                <a href="https://github.com/Yashmit-kumar" target="_blank" rel="noopener noreferrer" class="resume-contact-link">
+                  <svg class="resume-contact-icon icon-github" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <hr class="resume-divider">
+
+            <section class="resume-section">
+              <h2 class="resume-sec-title">PROFESSIONAL SUMMARY</h2>
+              <p class="resume-p">
+                Full Stack Developer skilled in HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MySQL/MongoDB, 
+                with hands-on experience building and deploying complete web applications – from responsive front-end interfaces 
+                to secure back-end APIs and database integration. Backed by academic training in Computer Science &amp; Cyber Security.
+              </p>
+            </section>
+
+            <section class="resume-section">
+              <h2 class="resume-sec-title">TECHNICAL SKILLS</h2>
+              <div class="resume-skills-list">
+                <p><strong>Programming &amp; Querying:</strong> C, Java, Python, JavaScript (ES6+)</p>
+                <p><strong>Frontend Development:</strong> HTML5, CSS3, JavaScript, React.js, Responsive Design, CSS Grid/Flexbox</p>
+                <p><strong>Backend Development:</strong> Node.js, Express.js, REST APIs, Routing, Middleware Architecture</p>
+                <p><strong>Databases &amp; ORM:</strong> MySQL, MongoDB, Sequelize (ORM), Mongoose (ODM)</p>
+                <p><strong>Developer Tools &amp; Cloud:</strong> Git, GitHub, Cloud Hosting, Canva, VS Code</p>
+                <p><strong>Soft Skills:</strong> Teamwork, Problem Solving, Leadership, Technical Communication</p>
+              </div>
+            </section>
+
+            <section class="resume-section">
+              <h2 class="resume-sec-title">EDUCATION</h2>
+              <div class="resume-item">
+                <div class="resume-item-head">
+                  <span class="bold">Rungta College of Engineering and Technology – Bhilai</span>
+                  <span class="italic">Graduating: 2028</span>
+                </div>
+                <div class="resume-subhead">Bachelor of Technology – CSE (Cyber Security)</div>
+              </div>
+            </section>
+
+            <section class="resume-section">
+              <h2 class="resume-sec-title">PROJECTS</h2>
+              
+              <div class="resume-item">
+                <div class="resume-item-head">
+                  <span class="bold">Dictionary Web Application</span>
+                  <span class="italic">Dec 2025 – Jan 2026</span>
+                </div>
+                <div class="resume-subhead">HTML, CSS, JavaScript, Web APIs</div>
+                <ul class="resume-bullets">
+                  <li>Developed an interactive Dictionary Web Application using HTML, CSS, and JavaScript.</li>
+                  <li>Provides real-time word definitions, phonetics/pronunciation, and interactive audio playback.</li>
+                  <li>Features a simple, responsive, and user-friendly interface for rapid vocabulary lookups.</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-item-head">
+                  <span class="bold">Random Password Generator</span>
+                  <span class="italic">Feb 2026 – Mar 2026</span>
+                </div>
+                <div class="resume-subhead">HTML, CSS, JavaScript, Cryptographic Security</div>
+                <ul class="resume-bullets">
+                  <li>Developed a Random Password Generator using HTML, CSS, and JavaScript with a clean UI.</li>
+                  <li>Generates strong and secure passwords leveraging uppercase, lowercase, numerals, and special characters.</li>
+                  <li>Added customizable generation parameters based on length and character sets, enhancing password strength and usability.</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-item-head">
+                  <span class="bold">Number Guessing Game</span>
+                  <span class="italic">Apr 2026 – May 2026</span>
+                </div>
+                <div class="resume-subhead">C Programming Language, Systems Logic</div>
+                <ul class="resume-bullets">
+                  <li>Developed a Number Guessing Game in C utilizing pseudo-random number generation.</li>
+                  <li>Implemented loops, conditional statements, and user input validation for robust gameplay.</li>
+                  <li>Added attempt tracking and hints to improve the interactive user experience.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="resume-section">
+              <h2 class="resume-sec-title">AWARDS &amp; CERTIFICATIONS</h2>
+              <ul class="resume-bullets">
+                <li><strong>Generative AI:</strong> Prompt Engineering, LLMs, Generative Models.</li>
+                <li><strong>Full Stack Development:</strong> Coding Spoon (HTML, CSS, JavaScript).</li>
+                <li><strong>MERN Full Stack Development:</strong> Coding Spoon (React.js, Node.js, Express, MongoDB).</li>
+                <li><strong>AntiGravity Bootcamp:</strong> Comprehensive Full Stack &amp; Software Engineering.</li>
+              </ul>
+            </section>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. INTERACTIVE DEVELOPER HACKER TERMINAL (EASTER EGG / CLI) -->
+  <div id="terminalOverlay" class="terminal-overlay hidden" aria-hidden="true">
+    <div class="terminal-window">
+      <div class="terminal-window-bar">
+        <div class="terminal-window-btns">
+          <span class="term-dot term-close" id="closeTerminalBtn"></span>
+          <span class="term-dot term-min"></span>
+          <span class="term-dot term-max"></span>
+        </div>
+        <div class="term-title">yashmit@cyber-terminal: ~ (Type 'help' for commands)</div>
+        <button class="term-x-btn" id="closeTerminalXBtn">&times;</button>
+      </div>
+
+      <div class="terminal-body" id="terminalOutput">
+        <div class="term-welcome">
+          <pre class="term-ascii-logo">
+  __   __         _               _ _     _  __                             
+  \ \ / /_ _ ___ | |__  _ __ ___ (_) |_  | |/ /   _ _ __ ___   __ _ _ __   
+   \ V / _` / __|| '_ \| '_ ` _ \| | __| | ' / | | | '_ ` _ \ / _` | '__|  
+    | | (_| \__ \| | | | | | | | | | |_  | . \ |_| | | | | | | (_| | |     
+    |_|\__,_|___/|_| |_|_| |_| |_|_|\__| |_|\_\__,_|_| |_| |_|\__,_|_|     
+          </pre>
+          <div class="term-intro-text">
+            <span>Welcome to Yashmit Kumar's Interactive Developer CLI [v2.4.0-cyber].</span><br>
+            <span>Type <strong class="term-green">'help'</strong> to see available commands or <strong class="term-green">'skills'</strong>, <strong class="term-green">'projects'</strong>, <strong class="term-green">'contact'</strong>.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="terminal-prompt-row">
+        <span class="term-user-path">yashmit@portfolio:~$</span>
+        <input type="text" id="terminalInput" class="term-input" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Core Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>
