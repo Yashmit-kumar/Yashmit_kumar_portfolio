@@ -89,23 +89,6 @@ python -m http.server 3000
 http://localhost:3000
 ```
 
----
-
-## 🚀 How to Deploy Online (Free & Fast)
-
-### 1. GitHub Pages (Recommended)
-1. Push this folder to a GitHub repository named `portfolio` or `<your-username>.github.io`.
-2. Go to **Settings > Pages**.
-3. Under **Branch**, select `main` (root) and click **Save**.
-4. Your portfolio will be live at `https://<your-username>.github.io/portfolio` in seconds!
-
-### 2. Vercel
-1. Install Vercel CLI (`npm i -g vercel`) or visit [vercel.com](https://vercel.com).
-2. Import your GitHub repository or run `vercel` in the project directory.
-3. Instant global deployment with custom domain support.
-
----
-
 ## 👨‍💻 Developer Information
 
 - **Name:** Yashmit Kumar
