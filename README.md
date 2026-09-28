@@ -93,7 +93,7 @@ http://localhost:3000
 
 - **Name:** Yashmit Kumar
 - **Role:** Full Stack Developer
-- **Degree:** BTech in Computer Science & Engineering (Cyber Security), 2024–2028
+- **Degree:** BTech in Computer Science & Engineering (Cyber Security)
 - **Institution:** Rungta College of Engineering and Technology (RCET), Bhilai
 - **Email:** `yashmitbhatt07@gmail.com`
 - **LinkedIn:** [LinkedIn](https://linkedin.com/in/yashmit-bhatt-799a11360)
