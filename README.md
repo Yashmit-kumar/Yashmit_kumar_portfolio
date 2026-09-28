@@ -97,5 +97,5 @@ http://localhost:3000
 - **Institution:** Rungta College of Engineering and Technology (RCET), Bhilai
 - **Phone:** `+91-9142939660`
 - **Email:** `yashmitbhatt07@gmail.com`
-- **LinkedIn:** [linkedin.com/in/yashmit-bhatt-799a11360](https://linkedin.com/in/yashmit-bhatt-799a11360)
-- **GitHub:** [github.com/Yashmit-kumar](https://github.com/Yashmit-kumar)
+- **LinkedIn:** [LinkedIn](https://linkedin.com/in/yashmit-bhatt-799a11360)
+- **GitHub:** [GitHub](https://github.com/Yashmit-kumar)
