@@ -181,6 +181,9 @@
 
     bindEvents() {
       window.addEventListener('resize', () => {
+        // Mobile: the address bar hiding/showing while scrolling only changes the height.
+        // Skip the rebuild in that case so particles don't reset/flicker. Desktop unchanged.
+        if (window.innerWidth <= 768 && window.innerWidth === this.width) return;
         this.resize();
         this.initParticles();
       });
